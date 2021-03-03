@@ -9,7 +9,7 @@ def test_get_color_code():
     # the following test will fail at the beginning,
     # uncomment when you think you are finished!
     # assert get_color_code("red") == "#ff0000"
-    assert get_color_code("blue") == "cat"
+    assert get_color_code("blue") == "green"
 
 
 # our very first functional test
