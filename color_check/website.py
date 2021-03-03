@@ -32,8 +32,9 @@ def show_color():
 
     logging.debug('Rendering color.html')
 
-    user_submitted_string = request.form.get("color", False)
-    color_hex_code = get_color_code(user_submitted_string)
+    #user_submitted_string = request.form.get("color", False)
+    #color_hex_code = get_color_code(user_submitted_string)
+    color_hex_code = '#d2b48c'
 
     return render_template('color.html', page_title="Show Color",
                            color=color_hex_code)
