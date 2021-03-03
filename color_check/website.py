@@ -13,7 +13,7 @@ logging.basicConfig(filename='/tmp/log.log',
 @app.route('/')
 def index():
 
-    # logging.debug('Rendering index.html')
+    logging.debug('Rendering index.html')
 
     return render_template('index.html', page_title="Color Check")
 
