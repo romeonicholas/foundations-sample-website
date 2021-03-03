@@ -10,7 +10,7 @@ import json
 import logging
 
 
-logging.basicConfig(filename='log.log',
+logging.basicConfig(filename='tmp/log.log',
                     level=logging.DEBUG,
                     format=f'%(asctime)s %(levelname)s : %(message)s')
 
