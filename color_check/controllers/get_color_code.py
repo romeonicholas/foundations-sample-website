@@ -16,7 +16,7 @@ logging.basicConfig(filename='/tmp/log.log',
 
 
 def get_color_code(color_name):
-    lowered_color_name = color_name.lower()
+    lowered_color_name = str(color_name).lower()
 
     with open('color_check/data/css-color-names.json', 'r') as color_file:
         color_data = color_file.read()
