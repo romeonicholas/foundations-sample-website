@@ -16,17 +16,16 @@ logging.basicConfig(filename='/tmp/log.log',
 
 
 def get_color_code(color_name):
-    
-    color_name = color_name.lower()
+    lowered_color_name = color_name.lower()
 
     with open('color_check/data/css-color-names.json', 'r') as color_file:
         color_data = color_file.read()
 
     colors_dict = json.loads(color_data)
 
-    if color_name in colors_dict:
-        logging.debug(f'User entered valid color: {color_name} for hex code {colors_dict[color_name]}')
-        return colors_dict[color_name]
+    if lowered_color_name in colors_dict:
+        logging.debug(f'User entered valid color: {lowered_color_name} for hex code {colors_dict[lowered_color_name]}')
+        return colors_dict[lowered_color_name]
     else:
-        logging.debug(f'User entered INVALID color: {color_name}')
+        logging.debug(f'User entered INVALID color: {lowered_color_name}')
         return 'error'
