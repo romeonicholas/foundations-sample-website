@@ -5,9 +5,9 @@ from flask import request
 from color_check.controllers.get_color_code import get_color_code
 app = Flask(__name__)
 
-# logging.basicConfig(filename='tmp/log.log',
-#                     level=logging.DEBUG,
-#                     format=f'%(asctime)s %(levelname)s : %(message)s')
+logging.basicConfig(filename='tmp/log.log',
+                    level=logging.DEBUG,
+                    format=f'%(asctime)s %(levelname)s : %(message)s')
 
 
 @app.route('/')
