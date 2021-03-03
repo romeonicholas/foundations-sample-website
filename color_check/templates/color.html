@@ -1,8 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+{% if color != 'error' -%}
     <p>{{ color }}</p>
     
     <div style="width:30px;height:10px;background-color:{{color}}"></div>
+{% else -%}
+    <p>You did not enter a valid color</p>
+{% endif %}    
 
 {% endblock %}
