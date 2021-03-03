@@ -30,7 +30,7 @@ def show_color():
     # - if the color doesn't exist, give the user a useful error message.
     # - create a log.txt file which records (logs) the user requests.
 
-    # logging.debug('Rendering color.html')
+    logging.debug('Rendering color.html')
 
     user_submitted_string = request.form.get("color", False)
     color_hex_code = get_color_code(user_submitted_string)

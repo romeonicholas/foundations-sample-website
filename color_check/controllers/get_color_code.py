@@ -10,9 +10,9 @@ import json
 import logging
 
 
-# logging.basicConfig(filename='tmp/log.log',
-#                     level=logging.DEBUG,
-#                     format=f'%(asctime)s %(levelname)s : %(message)s')
+logging.basicConfig(filename='/tmp/log.log',
+                    level=logging.DEBUG,
+                    format=f'%(asctime)s %(levelname)s : %(message)s')
 
 
 def get_color_code(color_name):
@@ -23,8 +23,8 @@ def get_color_code(color_name):
     colors_dict = json.loads(color_data)
 
     if color_name in colors_dict:
-        # logging.debug(f'User entered valid color: {color_name} for hex code {colors_dict[color_name]}')
+        logging.debug(f'User entered valid color: {color_name} for hex code {colors_dict[color_name]}')
         return colors_dict[color_name]
     else:
-        # logging.debug(f'User entered INVALID color: {color_name}')
+        logging.debug(f'User entered INVALID color: {color_name}')
         return 'error'
