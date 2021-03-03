@@ -1,12 +1,20 @@
+import logging
 from flask import Flask
 from flask import render_template
 from flask import request
 from color_check.controllers.get_color_code import get_color_code
 app = Flask(__name__)
 
+logging.basicConfig(filename='log.log',
+                    level=logging.DEBUG,
+                    format=f'%(asctime)s %(levelname)s : %(message)s')
+
 
 @app.route('/')
 def index():
+
+    logging.debug('Rendering index.html')
+
     return render_template('index.html', page_title="Color Check")
 
 
@@ -21,6 +29,8 @@ def show_color():
     # - render a new page which shows a square of that color and its name
     # - if the color doesn't exist, give the user a useful error message.
     # - create a log.txt file which records (logs) the user requests.
+
+    logging.debug('Rendering color.html')
 
     user_submitted_string = request.form.get("color", False)
     color_hex_code = get_color_code(user_submitted_string)
