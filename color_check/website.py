@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 logging.basicConfig(filename='/tmp/log.log',
                     level=logging.DEBUG,
-                    format=f'%(asctime)s %(levelname)s : %(message)s')
+                    format=f"%(asctime)s %(levelname)s : %(message)s")
 
 
 @app.route('/')
